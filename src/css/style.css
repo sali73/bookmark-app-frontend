@@ -1,0 +1,77 @@
+
+.grid{
+    display: grid;
+    grid-template-areas: 
+    "head head head head"
+    "nav nav art art"
+    "main main main main "
+    "foot foot foot foot "
+    ;
+    grid-template-rows: 380px 180px  auto 60px;
+}
+
+header{
+    grid-area:head;
+    background-image: url(https://littlecoffeefox.com/wp-content/uploads/2018/11/Books-on-a-table-next-to-plant.jpg);
+    padding-top: 20px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Lobster', cursive;
+}
+header > h1{
+    text-align: right;
+    padding-right: 250px;
+    color:  rgb(51, 96, 60);
+    font-size: 3rem;
+}
+nav{
+    grid-area:nav;
+    background-color: rgb(51, 96, 60);
+    color:  rgb(215, 211, 211);
+    padding-right: 200px;
+    padding-left: 150px;
+    padding-top: 10px;
+}
+h4{
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Lobster', cursive;
+}
+article{
+    grid-area:art;
+    background-color: rgb(51, 96, 60);
+    color:  rgb(215, 211, 211);
+    padding-top: 10px;
+    padding-right: 200px;
+}
+
+main{
+    grid-area:main;
+   
+}
+footer{
+    grid-area:foot;
+    background-color: rgb(51, 96, 60);
+    text-align: center;
+    color: wheat;
+
+}
+
+.main{
+    background-color: rgb(238, 232, 219);   
+}
+.main > ul{
+    margin: 30px;
+    list-style: none;
+    
+}
+li {
+    display: flex;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+a{
+    color: rgb(51, 96, 60);
+     
+}
+
+
