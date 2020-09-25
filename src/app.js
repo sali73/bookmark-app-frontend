@@ -90,11 +90,11 @@ const App = (props) => {
             return (
               <li key={bookmark._id}>
                 <a href={bookmark.url}><h5>{bookmark.title}</h5></a>
-                <button class="btn btn-link" onClick={() => {handleDelete(bookmark._id);}}>
-                  X
+                <button onClick={() => {handleDelete(bookmark._id);}}>
+                  <img src="https://icons.iconarchive.com/icons/double-j-design/origami-colored-pencil/48/green-cross-icon.png">
                 </button>
-                <button class="btn btn-link" onClick={() => {handleSelect(bookmark)}}>
-                  E
+                <button onClick={() => {handleSelect(bookmark)}}>
+                  <img src="https://icons.iconarchive.com/icons/reclusekc/pencil/48/Pencil-2-icon.png">
                 </button>
               </li>
             );
