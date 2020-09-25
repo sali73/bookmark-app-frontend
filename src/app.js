@@ -88,22 +88,24 @@ const App = (props) => {
         {books
           ? books.map((bookmark) => {
             return (
-              <li key={bookmark._id}>
-                <a href={bookmark.url}><h5>{bookmark.title}</h5></a>
-                <button className="btn btn-link" onClick={() => {handleDelete(bookmark._id);}}>
-                  <img src="https://icons.iconarchive.com/icons/graphicloads/polygon/48/cross-2-icon.png" />
-                </button>
-                <button className="btn btn-link" onClick={() => {handleSelect(bookmark)}}>
-                  <img src="https://icons.iconarchive.com/icons/graphicloads/polygon/48/pencil-icon.png"/>
-                </button>
-              </li>
+                <div className="book">
+                    <li key={bookmark._id}>
+                      <a href={bookmark.url}><h5>{bookmark.title}</h5></a>
+                      <button className="btn btn-link" onClick={() => {handleDelete(bookmark._id);}}>
+                        <img className="icons" src="https://icons.iconarchive.com/icons/graphicloads/polygon/48/cross-2-icon.png" />
+                      </button>
+                      <button className="btn btn-link" onClick={() => {handleSelect(bookmark)}}>
+                        <img className="icons" src="https://icons.iconarchive.com/icons/graphicloads/polygon/48/pencil-icon.png"/>
+                      </button>
+                    </li>
+                </div>
             );
           })
           : "Loading..."
         }
       </ul>
       </main>
-      <footer><h4>copyright </h4></footer>
+      <footer><h4>@2020 by <big >Sali Mohamed & Curtis Woods</big> </h4></footer>
     </div>
     </div>
   );
