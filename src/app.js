@@ -26,14 +26,14 @@ const App = (props) => {
 
   // Get the bookmarks from the API
   const getInfo = async () => {
-    const response = await fetch('http://localhost:3001/books');
+    const response = await fetch('https://bookmark-application-backend.herokuapp.com/books');
     const result = await response.json();
     console.log(result);
     setBooks(result);
   };
 
   const handleCreate = async (data) => {
-    const response = await fetch('http://localhost:3001/books', {
+    const response = await fetch('https://bookmark-application-backend.herokuapp.com/books', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -45,7 +45,7 @@ const App = (props) => {
   };
 
   const handleDelete = async (id) => {
-    const response = await fetch(`http://localhost:3001/books/${id}`, {
+    const response = await fetch(`https://bookmark-application-backend.herokuapp.com/books/${id}`, {
       method: "DELETE",
     });
     getInfo(); // Update the list of bookmarks
@@ -57,7 +57,7 @@ const App = (props) => {
 
   const handleEdit = async (data) => {
 
-    const response = await fetch(`http://localhost:3001/books/${data._id}`, {
+    const response = await fetch(`https://bookmark-application-backend.herokuapp.com/books/${data._id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
