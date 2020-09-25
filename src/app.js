@@ -91,10 +91,10 @@ const App = (props) => {
               <li key={bookmark._id}>
                 <a href={bookmark.url}><h5>{bookmark.title}</h5></a>
                 <button class="btn btn-link" onClick={() => {handleDelete(bookmark._id);}}>
-                  X
+                  <img src="https://icons.iconarchive.com/icons/graphicloads/polygon/48/cross-2-icon.png" />
                 </button>
                 <button class="btn btn-link" onClick={() => {handleSelect(bookmark)}}>
-                  E
+                  <img src="https://icons.iconarchive.com/icons/graphicloads/polygon/48/pencil-icon.png"/>
                 </button>
               </li>
             );
